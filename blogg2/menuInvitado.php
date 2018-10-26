@@ -19,7 +19,7 @@
 				<label>Contraseña:</label>  
 				<input type="password" name="pass" id="password" placeholder="Contraseña" required/>
 
-				<br> <input class="aLogin" type="submit" name="login" value="LOGIN">	<a class="aLogin" href="logout.php"> Cerrar Sesion</a>
+				<br> <input class="aLogin" type="submit" name="login" value="LOGIN">
 			
 
 	      	</form>
