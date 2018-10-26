@@ -65,21 +65,24 @@ label{
 	margin-left: 7.5em;
 }
 
-ul{
+nav ul{
 	list-style: none;
 	color: white;
 }
-li , #lilogin, #liregistro{
+nav li , #lilogin, #liregistro{
 	display: inline-block;
 	color: black;
 	padding: 1em;
 	background: rgb(255, 255, 255,0.7);
 	border-radius: 1em;
 	font-family: "header";
-
-
-
 }
+
+#liregistro{
+	margin-right: 30px;
+}
+
+
 section{
 	background: rgb(255, 255, 255,0.5);
 	border-radius: 1em;
