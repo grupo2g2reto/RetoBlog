@@ -1,20 +1,5 @@
 <nav>
-
-<script>
-function mostrarOcultar(id){
-var elemento = document.getElementById(id);
-if(!elemento) {
-return true;
-}
-if (elemento.style.display == "none") {
-elemento.style.display = "block"
-} else {
-elemento.style.display = "none"
-};
-return true;
-};
-</script>
-
+<script type="text/javascript" src="JS/script.js"></script>
 <ul>
 	<li>Entrantes</li>
 	<li>verdura</li>
@@ -33,7 +18,10 @@ return true;
 		        <input type="text" name="usuario" id="name" placeholder="Usuario" required/>
 				<label>Contraseña:</label>  
 				<input type="password" name="pass" id="password" placeholder="Contraseña" required/>
-		       <br> <a href="#" class="aLogin">Login</a>
+
+				<br> <input class="aLogin" type="submit" name="login" value="LOGIN">	<a class="aLogin" href="logout.php"> Cerrar Sesion</a>
+			
+
 	      	</form>
 	    </div>
 	</li>
@@ -45,4 +33,3 @@ return true;
 
 </ul>
 </nav>
-<script type="text/javascript" src="JS/script.js"></script>

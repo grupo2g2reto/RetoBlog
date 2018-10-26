@@ -1,11 +1,15 @@
-//..................................................LOGIN..............................................................
-//...........................................desplegable login.........................................................
-// mostrar y ocultar formulario de inicio de sesion
-var login=document.getElementById("login");
-login.onclick=function() {desplegarLogin(document.getElementsByClassName("testbox").style(display = "block"))};
-/*function desplegarLogin(){
-	document.getElementsByClassName("testbox").style(display = "block");
-	//document.write("<style>.testbox{display: block;}</style>");document.write("<style>.testbox{display: block;}</style>");
-}*/
-   /* var login=document.getElementById('login');
-    console.log(login);*/
+
+/* login */
+
+function mostrarOcultar(id){
+    var elemento = document.getElementById(id);
+    if(!elemento) {
+    return true;
+    }
+    if (elemento.style.display == "none") {
+    elemento.style.display = "block"
+    } else {
+    elemento.style.display = "none"
+    };
+    return true;
+    };
