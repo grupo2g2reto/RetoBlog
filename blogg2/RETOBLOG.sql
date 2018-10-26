@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-10-2018 a las 08:26:43
+-- Tiempo de generación: 26-10-2018 a las 10:40:19
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.2.9
 
@@ -32,7 +32,7 @@ CREATE TABLE `comentario` (
   `numero_comentario` bigint(20) UNSIGNED NOT NULL,
   `titulo_entrada` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `contenido` text COLLATE utf8_unicode_ci NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` datetime NOT NULL,
   `usuario_comentario` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -41,7 +41,7 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`numero_comentario`, `titulo_entrada`, `contenido`, `fecha`, `usuario_comentario`) VALUES
-(1, 'TARTA DE CHOCOLATE', 'muy rica', '2018-01-28', 'admin');
+(1, 'TARTA DE CHOCOLATE', 'muy rica', '2018-01-28 00:00:00', 'admin');
 
 -- --------------------------------------------------------
 
