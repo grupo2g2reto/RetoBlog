@@ -20,8 +20,8 @@
 			  	<input type="password" name="pass" id="name" placeholder="Contraseña" required/>
 				  <label id="icon" ><i class="icon-shield"></i></label>
 			  	<input type="password" name="cpass" id="name" placeholder="Confirmar contraseña" required/>
-			  	
-			   	<a href="#" class="aRegistro">Register</a>
+			  	<input class="aRegistro" type="submit" name="login" value="REGISTRARSE">
+
 			</form>
 		</div>
 		<hr/>
