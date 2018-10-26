@@ -80,13 +80,21 @@ li , #lilogin, #liregistro{
 
 
 }
-section{
+
+#entrada {
+	background: rgb(255, 255, 255,0.5);
+	border-radius: 1em;
+	margin: 2em;
+	padding: 2em;
+}
+
+/* section{
 	background: rgb(255, 255, 255,0.5);
 	border-radius: 1em;
 	margin: 2em;
 	padding: 2em;
 	
-}
+} */
 .row{
 	display: flex;
 	flex-wrap: wrap;
