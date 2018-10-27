@@ -82,14 +82,12 @@ nav li , #lilogin, #liregistro{
 	margin-right: 30px;
 }
 
-
-<<<<<<< HEAD
-section{
-=======
+#entrada a:link {
+    background-color: transparent; 
+    text-decoration: underline;
 }
 
-#entrada {
->>>>>>> 10c8ab008fe2dc6c0fffea98fa763e84d9f858c8
+section{
 	background: rgb(255, 255, 255,0.5);
 	border-radius: 1em;
 	margin: 2em;
