@@ -1,10 +1,13 @@
+
+
+
 <?php
 
 
 include 'conexion.php';
 
-
-
+        
+echo "<link rel='stylesheet' href='CSS/estilo.css'>";
 try {
 $sentencia=$db->prepare("SELECT * FROM comentario"); 
 $sentencia->execute();
@@ -17,5 +20,5 @@ $db=null;
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
 }  
-
+echo "<a class='avolver' href='index.php'> Volver </a>"	
 ?>

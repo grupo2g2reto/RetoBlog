@@ -8,3 +8,9 @@
 	</ul>
 </nav>
 
+<section class="ad">
+
+<article>
+<h2>BIENVENIDO ADMINISTRADOR</h2>
+</article>
+</section>
