@@ -24,6 +24,7 @@
 			if ($usuario=='admin'){
 				
 				 require_once('menuAdministrador.php');
+				
 			}else{
 				
 				require_once('menuUsuario.php');
