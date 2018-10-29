@@ -18,7 +18,6 @@
 	$sentencia=$db->prepare("SELECT titulo 'et' FROM entrada"); 
 	$sentencia->execute();
 
-
 		//LLAMAMOS AL MENU DEPENDIENDO DEL USUARIO REGISTRADO
 		if (isset($usuario) &&  isset($_SESSION['logueado']) && $_SESSION['logueado'] == true ){
 			
@@ -35,11 +34,11 @@
 			include('menuInvitado.php');
 		}
 		echo "<div>
-		<section>";
+		<section id='entrada'>";
 		echo '<h2>Entradas:</h2><br>';
 	foreach($sentencia as $entrada){	
 		$variable=$entrada["et"];	
-	    echo '<article id="entrada"><br><a href="mostrarEntrada.php?var='.$variable.'">'.$variable.'</a>';
+	    echo '<article><br><a href="mostrarEntrada.php?var='.$variable.'">'.$variable.'</a>';
 	}
 	} catch(PDOException $e) {
 	  echo 'Error: ' . $e->getMessage();
