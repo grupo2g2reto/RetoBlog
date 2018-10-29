@@ -16,6 +16,7 @@ try {
 $sentencia=$db->prepare("INSERT INTO comentario (titulo_entrada,contenido,fecha,usuario_comentario) VALUES (?,?,?,?);"); 
 $sentencia->execute([$titulo,$contenido,$fecha,$usuario]);
 
+$db=null;
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
 }

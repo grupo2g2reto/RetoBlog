@@ -1,13 +1,9 @@
-<?php 
-	  session_start(); 
-?>
+<nav>
 <ul>
-	<li>Entrantes</li>
-	<li>verdura</li>
-	<li>carnes</li>
-	<li>pescados</li>
+
 	<li>postres</li>
-	<li>Ajustes Cuenta</li>
-	<li>Cerrar Sesión</li>
+	<li><a href="entrada.php">Insertar entrada</a></li>
+	<li><a href="logout.php">Cerrar Sesión</a></li>
 </ul>
+<nav>
 <script type="text/javascript" src="JS/script.js"></script>

@@ -1,6 +1,10 @@
 
 <?php
 	session_start();
+	if (isset($_SESSION['usuario'])){
+	
+		$usuario=$_SESSION['usuario'];
+	}
 	//LLAMAMOS A LA CABECERA
 	require_once('cabecera.html');
 
@@ -16,11 +20,16 @@
 
 
 		//LLAMAMOS AL MENU DEPENDIENDO DEL USUARIO REGISTRADO
-		if (isset($usuario)){
+		if (isset($usuario) &&  isset($_SESSION['logueado']) && $_SESSION['logueado'] == true ){
+			
 			if ($usuario=='admin'){
-				require_once('menuAdministrador.php');
+				
+				 require_once('menuAdministrador.php');
 			}else{
+				
 				require_once('menuUsuario.php');
+			
+
 			}
 		}else{
 			include('menuInvitado.php');

@@ -1,10 +1,7 @@
 <nav>
 <script type="text/javascript" src="JS/script.js"></script>
 <ul>
-	<li>Entrantes</li>
-	<li>verdura</li>
-	<li>carnes</li>
-	<li>pescados</li>
+
 	<li>postres</li>
 
 

@@ -1,4 +1,12 @@
-<?php
+
+
+<?
+
+session_start();
+if (isset($_SESSION['usuario'])){
+
+	$usuario=$_SESSION['usuario'];
+}
 	//LLAMAMOS A LA CABECERA
 	require_once('cabecera.html');
 
@@ -33,7 +41,8 @@
 		<section>";
 		echo '<h2>'.$titulo.'</h2><br>';
 		foreach($sentencia as $entrada){		
-			echo '<article><br><h3>Contenido:</h3><br><p>'.$entrada['ec'].'</p><br><h3>Fecha de entrada:</h3><br><p>'.$entrada['ef'].'</p>';
+			echo '<article><br><h3>Contenido:</h3><br><p>'.$entrada['ec'].'</p><br><h3>Fecha de entrada:</h3><p>'.$entrada['ef'].'</p><br><h4>Comentarios:</h4><p>'.$entrada['cc'].'</p><br><h4>Fecha de comentario:</h4><p>'.$entrada['cf'].'</p>';
+			echo "<button>  INSERTAR COMENTARIO </button>";
 		}
 	} catch(PDOException $e) {
 	  echo 'Error: ' . $e->getMessage();

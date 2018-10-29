@@ -8,8 +8,8 @@ try{
 
     include 'conexion.php';
 
-    $sentencia=$db->prepare("SELECT pass FROM usuario WHERE nombre = :nombre "); 
-    $sentencia->bindParam(':nombre',$usuario, PDO::PARAM_STR);
+    $sentencia=$db->prepare("SELECT pass FROM usuario WHERE usuario = :usuario "); 
+    $sentencia->bindParam(':usuario',$usuario, PDO::PARAM_STR);
     $sentencia->execute();
 
     $encryptada;
@@ -23,16 +23,16 @@ try{
         //Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
         $_SESSION['logueado']=true;
         $_SESSION['usuario']=$usuario;
-        echo "Bienvenido! " . $_SESSION['usuario'];
-        header ('Location:index.php');    
+       
+         header ('Location:index.php'); 
          
     }else{
         //Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
         $_SESSION['logueado']=false;
         echo "Usuario o Password estan incorrectos.";
-        echo "<br><a href='login.php'>Volver a Intentarlo</a>";  
+        echo "<br><a href='index.php'>Volver a Intentarlo</a>";  
     } 
-        
+    $db=null;    
 }catch(PDOException $e) {
      $e = $e->getMessage();
 }

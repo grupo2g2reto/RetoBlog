@@ -12,12 +12,16 @@ $fecha=$_POST['fecha'];
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
 
 try {
-$sentencia=$db->prepare("INSERT INTO entrada VALUES (?,?,?);"); 
+$sentencia=$db->prepare("INSERT INTO entrada (titulo,contenido,fecha_entrada) VALUES (?,?,?);"); 
 $sentencia->execute([$titulo,$contenido,$fecha]);
 
+$db=null;
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
 }
+
+echo "<br><a href='index.php'>Volver</a>";
+        
 
 } else {
         
@@ -35,21 +39,4 @@ $sentencia->execute([$titulo,$contenido,$fecha]);
 
 ?>
 
-
-
-<!-- include 'conexion.php';
-
-$titulo=$_POST['titulo'];
-$contenido=$_POST['contenido'];
-$fecha=$_POST['fecha_entrada'];
-
-try {
-$sentencia=$db->prepare("SELECT * FROM entrada"); 
-$sentencia->execute();
-
-while( $row = $sentencia->fetch() )
-    echo $row[0] . '<br/>';
-} catch(PDOException $e) {
-  echo 'Error: ' . $e->getMessage();
-}   -->
 

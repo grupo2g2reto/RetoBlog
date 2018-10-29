@@ -4,6 +4,7 @@
  <title>ENTRADA</title>
 
  <meta charset = "utf-8">
+ <link rel="stylesheet" href="CSS/estilo.css">	
 </head>
 
 <body>
@@ -11,7 +12,7 @@
 <h1>ENTRADAS</h1>
 <hr/>
 
-<form action="accionEntrada.php" method="post" >
+<form class="form" action="accionEntrada.php" method="post" >
 
 <label>Titulo:</label><br>
 <input name="titulo" type="text"  required>
@@ -27,34 +28,11 @@
 <br><br>
 
 
-<input type="submit" name="insertar"  value="Enviar">
+<input type="submit" class="boton" name="insertar"  value="Enviar">
 
-
-
-<?php
-include 'conexion.php';
-
-
-
-try {
-$sentencia=$db->prepare("SELECT * FROM entrada"); 
-$sentencia->execute();
-
-foreach($sentencia as $entrada){
-    echo '<br>Titulo: ' . $entrada['titulo'] . '<br>  Contenido: ' . $entrada['contenido']. ' <br>Fecha: ' . $entrada['fecha_entrada'];
-}
-} catch(PDOException $e) {
-  echo 'Error: ' . $e->getMessage();
-} 
-
-?>
 
 </form>
 <hr />
-
-<footer>
- 
-</footer>
 
  </body>
 </html>
