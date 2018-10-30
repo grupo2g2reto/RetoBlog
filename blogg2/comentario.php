@@ -46,6 +46,7 @@ $sentencia->execute();
 foreach($sentencia as $comentario){
     echo '<br>  Titulo de la entrada: ' . $comentario['titulo_entrada']. ' <br>Contenido: ' . $comentario['contenido'] . ' <br>Fecha: ' . $comentario['fecha'] . ' <br>Usuario: ' . $comentario['usuario_comentario'];
 }
+$db=null;
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
 }  
