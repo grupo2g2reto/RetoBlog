@@ -32,3 +32,10 @@ function redireccionar(e){
 		location.href=rutaDestino.toString();
 	}
 }
+function mostrarComentarios(){
+    var rutaDestino ='http://localhost/Documentos/RetoBlog/blogg2/mostrarComentario.php';
+	if(window.location != rutaDestino){
+
+		location.href=rutaDestino.toString();
+	}
+}

@@ -2,9 +2,9 @@
 
 session_start();
 include 'conexion.php';
-$titulo=$_POST['titulo'];
+$titulo=$_SESSION['titulo'];
 $contenido=$_POST['contenido'];
-$fecha=$_POST['fecha'];
+// $fecha=;
 
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
