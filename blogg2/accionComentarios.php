@@ -3,15 +3,10 @@
 session_start();
 
 include 'conexion.php';
-
-$titulo=$_POST['titulo'];
+$titulo=$_SESSION['titulo'];
 $contenido=$_POST['contenido'];
-$fecha=$_POST['fecha'];
-<<<<<<< HEAD
-$veriComentario=$_POST['veriComentario'];
-=======
->>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 
+$veriComentario=$_POST['veriComentario'];
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
        

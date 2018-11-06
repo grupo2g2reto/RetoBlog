@@ -23,15 +23,6 @@ h1{
 }
 
 h3{
-<<<<<<< HEAD
-	text-align: center;
-	font-family: chilanka;
-	text-shadow: 2px 2px white; 
-	margin-top: 2em;
-    font-size: 2em;
-}
-
-=======
 	
 	font-family: chilanka;
 	margin-top: 2em;
@@ -45,7 +36,6 @@ h3{
 	font-size: 2em;
 	text-align: center;
 }
->>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 nav{
 	height: 17em;
 	padding-top: 2em;
@@ -131,7 +121,7 @@ nav li , #lilogin, #liregistro{
 }
 .ad{
 	text-align: center;
-	margin-top: -8em;
+	margin-top: -6em;
     margin-bottom: 7em;
 	background: rgb(255, 255, 255,0.7);
 	border-radius:1em;
