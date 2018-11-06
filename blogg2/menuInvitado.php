@@ -1,5 +1,5 @@
 <nav>
-<script type="text/javascript" src="JS/script.js"></script>
+
 <ul>
 
 	<li>postres</li>
@@ -20,7 +20,8 @@
 			
 
 	      	</form>
-	    </div>
+		</div>
+		
 	</li>
 	
 	<li id="liregistro"><a href="registro.php">Registro</a></li>

@@ -29,7 +29,8 @@ try{
     }else{
         //Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
         $_SESSION['logueado']=false;
-        echo "Usuario o Password estan incorrectos.";
+        echo "<link rel='stylesheet' href='CSS/estilo.css'>";
+        echo "<p>Usuario o Password estan incorrectos.</p>";
         echo "<br><a href='index.php'>Volver a Intentarlo</a>";  
     } 
     $db=null;    

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-10-2018 a las 10:40:19
+-- Tiempo de generación: 05-11-2018 a las 12:10:29
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.2.9
 
@@ -33,15 +33,16 @@ CREATE TABLE `comentario` (
   `titulo_entrada` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `contenido` text COLLATE utf8_unicode_ci NOT NULL,
   `fecha` datetime NOT NULL,
-  `usuario_comentario` varchar(30) COLLATE utf8_unicode_ci NOT NULL
+  `usuario_comentario` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `Verificado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `comentario`
 --
 
-INSERT INTO `comentario` (`numero_comentario`, `titulo_entrada`, `contenido`, `fecha`, `usuario_comentario`) VALUES
-(1, 'TARTA DE CHOCOLATE', 'muy rica', '2018-01-28 00:00:00', 'admin');
+INSERT INTO `comentario` (`numero_comentario`, `titulo_entrada`, `contenido`, `fecha`, `usuario_comentario`, `Verificado`) VALUES
+(1, 'TARTA DE CHOCOLATE', 'muy rica', '2018-01-28 00:00:00', 'admin', 0);
 
 -- --------------------------------------------------------
 
@@ -52,18 +53,20 @@ INSERT INTO `comentario` (`numero_comentario`, `titulo_entrada`, `contenido`, `f
 CREATE TABLE `entrada` (
   `titulo` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `contenido` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `fecha_entrada` date DEFAULT NULL
+  `fecha_entrada` datetime DEFAULT NULL,
+  `Verificado` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `entrada`
 --
 
-INSERT INTO `entrada` (`titulo`, `contenido`, `fecha_entrada`) VALUES
-('Flan de huevo', '1.- PreparaciÃ³n del caramelo. Coloca en un cazo el azÃºcar para el caramelo y aÃ±ade 2 o 3 cucharadas de agua. Enciende el fuego y deja hasta que se dore. No hay que hacerle nada, solo esperar a que coja un bonito color dorado. Cuando el caramelo alcance el color dorado que desees, viÃ©rtelo en el molde donde vas a preparar el flan. Reserva.', '2018-10-19'),
-('HELADO', 'Colocar todos los ingredientes en el vaso de la batidora y triturar hasta tener una mezcla homogÃ©nea. \r\nRepartir en los moldes para polos y congelar.', '2018-10-24'),
-('prueba', 'prueba', '2018-10-10'),
-('TARTA DE CHOCOLATE', 'Esta tarta mousse es un capricho para los amantes del chocolate, tan delicada que se funde en la boca. Tiene una textura muy suave y, pese a sus ingredientes es muy ligera. Esta receta lleva una deliciosa y ya clÃ¡sica base de galletas que contrasta con el mousse.', '2018-10-19');
+INSERT INTO `entrada` (`titulo`, `contenido`, `fecha_entrada`, `Verificado`) VALUES
+('Flan de huevo', '1.- PreparaciÃ³n del caramelo. Coloca en un cazo el azÃºcar para el caramelo y aÃ±ade 2 o 3 cucharadas de agua. Enciende el fuego y deja hasta que se dore. No hay que hacerle nada, solo esperar a que coja un bonito color dorado. Cuando el caramelo alcance el color dorado que desees, viÃ©rtelo en el molde donde vas a preparar el flan. Reserva.', '2018-10-19 00:00:00', 0),
+('HELADO', 'Colocar todos los ingredientes en el vaso de la batidora y triturar hasta tener una mezcla homogÃ©nea. \r\nRepartir en los moldes para polos y congelar.', '2018-10-24 00:00:00', 0),
+('Platano', 'platano', '2018-10-11 00:00:00', 0),
+('prueba', 'prueba', '2018-10-10 00:00:00', 0),
+('TARTA DE CHOCOLATE', 'Esta tarta mousse es un capricho para los amantes del chocolate, tan delicada que se funde en la boca. Tiene una textura muy suave y, pese a sus ingredientes es muy ligera. Esta receta lleva una deliciosa y ya clÃ¡sica base de galletas que contrasta con el mousse.', '2018-10-19 00:00:00', 0);
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`usuario`, `correo`, `pass`) VALUES
-('admin', 'admin@admin.com', '$2y$10$1uzjeDugRELgdxHWeUsrfOvEht1bNlhJnIcJBu.m375mDM7Uj.ttu');
+('admin', 'admin@admin.com', '$2y$10$1uzjeDugRELgdxHWeUsrfOvEht1bNlhJnIcJBu.m375mDM7Uj.ttu'),
+('anne', 'anne@anne.com', '$2y$10$z9wEHuvCBWDKL6S5gh74o.9J8R65SYhqD/rBbegL4yjhSjX/YxB6a'),
+('janire admi', 'ianire@gmail.com', '$2y$10$PSOWC9xiSBgouYRbu/tqDOkm/js0PYfhqqrY/Vp9Bb4TXTiWiN3j6');
 
 --
 -- Índices para tablas volcadas

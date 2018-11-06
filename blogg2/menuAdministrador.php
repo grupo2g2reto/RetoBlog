@@ -1,8 +1,16 @@
+
 <nav>
-<ul>
-	
+	<ul class="admin" >
+		<li  id="usuarios">Usuario</li>
+		<li id="entradas">Entradas</li> 
+		<li id="comentarios">Comentarios</li> 
+		<li><a href="logout.php">Cerrar Sesión</a></li>	
+	</ul>
+</nav>
 
+<section class="ad">
 
-	<li><a href="logout.php">Cerrar Sesión</a></li></ul>
-	</nav>
-<script type="text/javascript" src="JS/script.js"></script> 
+<article>
+<h2>BIENVENIDO ADMINISTRADOR</h2>
+</article>
+</section>

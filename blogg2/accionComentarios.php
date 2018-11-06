@@ -1,11 +1,14 @@
 <?php
 
 session_start();
+
 include 'conexion.php';
+
 $titulo=$_POST['titulo'];
 $contenido=$_POST['contenido'];
 $fecha=$_POST['fecha'];
-$usuario=$_POST['usuario'];
+$veriComentario=$_POST['veriComentario'];
+
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
        
@@ -13,8 +16,8 @@ if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
 try {
 
 
-$sentencia=$db->prepare("INSERT INTO comentario (titulo_entrada,contenido,fecha,usuario_comentario) VALUES (?,?,?,?);"); 
-$sentencia->execute([$titulo,$contenido,$fecha,$usuario]);
+$sentencia=$db->prepare("INSERT INTO comentario (titulo_entrada,contenido,fecha) VALUES (?,?,?);"); 
+$sentencia->execute([$titulo,$contenido,$fecha]);
 
 $db=null;
 } catch(PDOException $e) {

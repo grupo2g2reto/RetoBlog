@@ -3,9 +3,10 @@
 
 function mostrarOcultar(id){
     var elemento = document.getElementById(id);
-    if(!elemento) {
+
+    /*  if(!elemento) {
     return true;
-    }
+    }  */
     if (elemento.style.display == "none") {
     elemento.style.display = "block"
     } else {
@@ -13,3 +14,21 @@ function mostrarOcultar(id){
     };
     return true;
     };
+
+
+//recogemos los elementos li
+var lis = document.getElementsByTagName("li");
+
+for(var i = 0; i < lis.length; i++){
+	document.getElementById(lis[i].id).addEventListener("click", redireccionar);
+}
+
+function redireccionar(e){
+
+	var rutaDestino ='http://localhost/Proyectos/blog/RetoBlog/blogg2/' + e.target.id + '.php';
+	
+	if(window.location != rutaDestino){
+
+		location.href=rutaDestino.toString();
+	}
+}

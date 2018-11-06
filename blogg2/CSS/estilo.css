@@ -22,6 +22,14 @@ h1{
 	text-align: center;
 }
 
+h3{
+	text-align: center;
+	font-family: chilanka;
+	text-shadow: 2px 2px white; 
+	margin-top: 2em;
+    font-size: 2em;
+}
+
 nav{
 	height: 17em;
 	padding-top: 2em;
@@ -90,7 +98,7 @@ nav li , #lilogin, #liregistro{
 #entrada{
 	background: rgb(255, 255, 255,0.5);
 	border-radius: 1em;
-	margin: 2em;
+	margin: 1.5em;
 	padding: 2em;
 }
 
@@ -101,19 +109,20 @@ nav li , #lilogin, #liregistro{
 	padding: 2em;
 }
 
-/* section{
-	background: rgb(255, 255, 255,0.5);
-	border-radius: 1em;
-	margin: 2em;
-	padding: 2em;
-	
-} */
 .row{
 	display: flex;
 	flex-wrap: wrap;
 }
-
-
+.ad{
+	text-align: center;
+	margin-top: -8em;
+    margin-bottom: 7em;
+	background: rgb(255, 255, 255,0.7);
+	border-radius:1em;
+	padding: 3em;
+	font-family: chilanka;
+	text-shadow: 2px 2px white; 
+}
 
 #logo{
 	position: absolute;
@@ -122,8 +131,18 @@ nav li , #lilogin, #liregistro{
 
 a{
 	text-decoration: none;
+	color: black;
+	padding: 0.5em;
+	
+}
+
+ .avolver{
+	text-decoration: none;
 	padding: 0.5em;
 	color: black;
+	background: rgb(255, 255, 255,0.7);
+	border-radius:1em;
+	font-family: chilanka;
 }
 
 .registro{
@@ -163,26 +182,26 @@ footer{
 	background: rgb(255, 255, 255, 0.5);
 	height: 225px;
 	border-radius: 1em;
-	margin: 5px 30px;
+	margin: 45px 30px;
   }
   
-  footer ul{
-	  margin: 0px 30px;
-	  padding: 10px;
-	  width: 25%;
-	  float: left;
-	  list-style: none;
-  }
+footer ul{
+	margin: 0px 30px;
+	padding: 10px;
+	width: 25%;
+	float: left;
+	list-style: none;
+}
   
-  footer ul li{
-	  margin: 8px;
-  }
+footer ul li{
+	margin: 8px;
+}
   
-  .copyright{
-	  padding-bottom:50px;
-	  width: 100%;
-	  float: left;
-	  text-align: center;
-  }
+.copyright{
+    padding-bottom:50px;
+	width: 100%;
+	float: left;
+	text-align: center;
+}
   
   

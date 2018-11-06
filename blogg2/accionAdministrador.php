@@ -12,8 +12,9 @@ $usuario=$_POST['usuario'];
 $pass=$_POST['pass']; 
 
 
-
+borrarEntrada($titulo);
 function borrarEntrada($titulo){
+
 try {
 
 

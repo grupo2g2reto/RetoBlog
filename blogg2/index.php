@@ -24,22 +24,31 @@
 			if ($usuario=='admin'){
 				
 				 require_once('menuAdministrador.php');
+				 ?><script type="text/javascript" src="JS/script.js"></script><?php
+
 			}else{
 				
 				require_once('menuUsuario.php');
-			
+				echo "<div>
+				<section id='entrada'>";
+				echo '<h2>Entradas:</h2><br>';
+			foreach($sentencia as $entrada){	
+				$variable=$entrada["et"];	
+				echo '<article><br><a href="mostrarEntrada.php?var='.$variable.'">'.$variable.'</a>';
+			}
 
 			}
 		}else{
 			include('menuInvitado.php');
+			echo "<div>
+			<section id='entrada'>";
+			echo '<h2>Entradas:</h2><br>';
+		foreach($sentencia as $entrada){	
+			$variable=$entrada["et"];	
+			echo '<article><br><a href="mostrarEntrada.php?var='.$variable.'">'.$variable.'</a>';
 		}
-		echo "<div>
-		<section id='entrada'>";
-		echo '<h2>Entradas:</h2><br>';
-	foreach($sentencia as $entrada){	
-		$variable=$entrada["et"];	
-	    echo '<article><br><a href="mostrarEntrada.php?var='.$variable.'">'.$variable.'</a>';
-	}
+		}
+
 	} catch(PDOException $e) {
 	  echo 'Error: ' . $e->getMessage();
 	} 
