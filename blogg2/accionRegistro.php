@@ -17,7 +17,8 @@ try{
         $clave_cifrada = password_hash($pass, PASSWORD_DEFAULT, [10]);
         $sentencia=$db->prepare("INSERT INTO   usuario values (?,?,?);");
         $sentencia->execute([$usuario, $correo, $clave_cifrada]);
-        echo "<br> Registro con exito";
+        header("Location:index.php");
+        ?><script>alert(Registro con exito);</script><<?php
     }
     
 

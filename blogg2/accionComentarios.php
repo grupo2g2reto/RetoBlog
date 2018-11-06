@@ -1,11 +1,12 @@
 <?php
 
 session_start();
+
 include 'conexion.php';
 $titulo=$_SESSION['titulo'];
 $contenido=$_POST['contenido'];
-// $fecha=;
 
+$veriComentario=$_POST['veriComentario'];
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
        

@@ -7,6 +7,7 @@ include 'conexion.php';
 $titulo=$_POST['titulo'];
 $contenido=$_POST['contenido'];
 $fecha=$_POST['fecha'];
+$veriEntrada=$_POST['veriEntrada'];
 
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
