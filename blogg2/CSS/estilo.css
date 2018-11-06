@@ -23,6 +23,7 @@ h1{
 }
 
 h3{
+<<<<<<< HEAD
 	text-align: center;
 	font-family: chilanka;
 	text-shadow: 2px 2px white; 
@@ -30,6 +31,21 @@ h3{
     font-size: 2em;
 }
 
+=======
+	
+	font-family: chilanka;
+	margin-top: 2em;
+    font-size: 1em;
+}
+
+.h3titulo{
+	font-family: chilanka;
+	text-shadow: 2px 2px white; 
+	margin-top: 2em;
+	font-size: 2em;
+	text-align: center;
+}
+>>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 nav{
 	height: 17em;
 	padding-top: 2em;
@@ -163,6 +179,10 @@ a{
     font-family: header;
 	font-size: 11px;
 	margin: 0 auto;
+}
+
+button{
+	margin-left: 63em;
 }
 
 

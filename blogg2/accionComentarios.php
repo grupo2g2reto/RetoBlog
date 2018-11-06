@@ -7,7 +7,10 @@ include 'conexion.php';
 $titulo=$_POST['titulo'];
 $contenido=$_POST['contenido'];
 $fecha=$_POST['fecha'];
+<<<<<<< HEAD
 $veriComentario=$_POST['veriComentario'];
+=======
+>>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {

@@ -1,7 +1,7 @@
 <nav>
 <ul>
 
-	<li>postres</li>
+	<li><a href="index.php">Postres</a></li>
 	<li><a href="entrada.php">Insertar entrada</a></li>
 	<li><a href="logout.php">Cerrar Sesión</a></li>
 </ul>

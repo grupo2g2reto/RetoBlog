@@ -16,7 +16,11 @@ function mostrarOcultar(id){
     };
 
 
+<<<<<<< HEAD
 //recogemos los elementos li
+=======
+//regocemos los elementos li
+>>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 var lis = document.getElementsByTagName("li");
 
 for(var i = 0; i < lis.length; i++){
@@ -25,7 +29,11 @@ for(var i = 0; i < lis.length; i++){
 
 function redireccionar(e){
 
+<<<<<<< HEAD
 	var rutaDestino ='http://localhost/Proyectos/blog/RetoBlog/blogg2/' + e.target.id + '.php';
+=======
+	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/' + e.target.id + '.php';
+>>>>>>> 0e3add1a1ee2510dc1ddfb4d9186fa990e55282f
 	
 	if(window.location != rutaDestino){
 
