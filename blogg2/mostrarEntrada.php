@@ -57,7 +57,6 @@ if (isset($_SESSION['usuario'])){
 			foreach($sentencia2 as $entrada2){		
 				
 				echo '<article id="comentario"><h2>Comentario:</h2><br><h3>Contenido:</h3><br><p>'.$entrada2['cc'].'</p><br><h3>Fecha de comentario:</h3><br><p>'.$entrada2['cf'].'</p><h3>Usuario:</h3><br><p>'.$entrada2['cu'].'</p></article>';
-
 			}
 
 			echo "</section></div>";

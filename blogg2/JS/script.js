@@ -25,7 +25,7 @@ for(var i = 0; i < lis.length; i++){
 
 function redireccionar(e){
 
-	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/RetoBlog/blogg2/' + e.target.id + '.php';
+	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/' + e.target.id + '.php';
 	
 	if(window.location != rutaDestino){
 

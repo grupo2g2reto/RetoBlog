@@ -4,9 +4,25 @@
 	if (isset($_SESSION['usuario'])){
 	
 		$usuario=$_SESSION['usuario'];
+		?>
+
+		<script>
+			//UTILIZAMOS EL LOCALSTORAGE PARA GUARDAR EL USUARIO
+	   		localStorage.setItem("usuario","<?php echo $_SESSION['usuario']; ?>");
+	    </script>
+
+	    <?php
 	}
+
 	//LLAMAMOS A LA CABECERA
 	require_once('cabecera.html');
+	?>
+
+	<script>
+		alert('Bienvenido ' + <?php $_SESSION['usuario']; ?> + '!');
+	</script>
+
+	<?php
 
 	
 	include 'conexion.php';
@@ -18,6 +34,7 @@
 	$sentencia=$db->prepare("SELECT titulo 'et' FROM entrada"); 
 	$sentencia->execute();
 
+	
 		//LLAMAMOS AL MENU DEPENDIENDO DEL USUARIO REGISTRADO
 		if (isset($usuario) &&  isset($_SESSION['logueado']) && $_SESSION['logueado'] == true ){
 			
