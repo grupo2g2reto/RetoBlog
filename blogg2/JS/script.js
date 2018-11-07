@@ -33,7 +33,7 @@ function redireccionar(e){
 	}
 }
 function mostrarComentarios(){
-    var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/mostrarComentario.php';
+    var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/insertarComentario.php';
 	if(window.location != rutaDestino){
 
 		location.href=rutaDestino.toString();

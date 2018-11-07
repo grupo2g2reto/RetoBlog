@@ -25,7 +25,7 @@ for(var i = 0; i < lis.length; i++){
 
 function redireccionar(e){
 
-	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/RetoBlog/blogg2/' + e.target.id + '.php';
+	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/' + e.target.id + '.php';
 	
 	if(window.location != rutaDestino){
 
@@ -33,16 +33,9 @@ function redireccionar(e){
 	}
 }
 function mostrarComentarios(){
-    var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/mostrarComentario.php';
+    var rutaDestino ='http://localhost/Proyectos/RetoBlog/RetoBlog/blogg2/mostrarComentario.php';
 	if(window.location != rutaDestino){
 
 		location.href=rutaDestino.toString();
 	}
-}
-
-
-//BOTON BORRAR
-document.getElementById("btnBorrar").addEventListener(click, Borrar());
-function Borrar(){
-    
 }
