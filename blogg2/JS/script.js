@@ -94,7 +94,7 @@ function validarUsuario(u) {
 }
 
 function validarPass(pass) {
-    var clave = document.getElementsById("pass");
+    var clave = document.getElementById("pass");
     var array = [];
     if (!/^.{7,15}$/.test(pass)) {
         array.push("La contraseña debe tener entre 7-15 caracteres.");

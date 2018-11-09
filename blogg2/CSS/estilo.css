@@ -98,8 +98,8 @@ input{
 }
 
 label{
-	color: white;
-	text-shadow: 1px 1px black;
+	color: black;
+	text-shadow: 1px 1px white;
 	font-family: "header";
 	font-size: 16px;
 

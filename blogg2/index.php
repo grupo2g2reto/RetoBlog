@@ -6,10 +6,7 @@
 		$usuario=$_SESSION['usuario'];
 		?>
 
-		<script>
-			//UTILIZAMOS EL LOCALSTORAGE PARA GUARDAR EL USUARIO
-	   		localStorage.setItem("usuario","<?php echo $_SESSION['usuario']; ?>");
-	    </script>
+		
 
 	    <?php
 	}
