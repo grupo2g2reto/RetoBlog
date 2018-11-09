@@ -50,7 +50,15 @@ function confirmarBorrarUsuario() {
 
 function confirmarBorrarComentario() {
     console.log("prueba");
-    var r = confirm("¿Borrar usuario?");
+    var r = confirm("¿Borrar comentario?");
+    if (r == false) {
+        event.preventDefault();
+    }
+}
+
+function confirmarBorrarEntrada() {
+    console.log("prueba");
+    var r = confirm("¿Borrar entrada?");
     if (r == false) {
         event.preventDefault();
     }
