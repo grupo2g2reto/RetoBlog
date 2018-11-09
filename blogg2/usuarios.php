@@ -36,7 +36,7 @@ if (isset($_POST['idusuario']))
 //Se almacena en una variable el nombre del registro a eliminar
 $usuario = $_POST["idusuario"];
 
- echo "$usuario <br>";
+ 
 $sql='DELETE FROM usuario WHERE idusuario="'.$usuario.'"';
 $sentencia=$db->prepare($sql); 
 $sentencia->execute([$usuario]);

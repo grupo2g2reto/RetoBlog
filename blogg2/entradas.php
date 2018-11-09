@@ -37,8 +37,8 @@ if (isset($_POST["titulo"]))
 //Se almacena en una variable el id del registro a eliminar
 $titulo = $_POST["titulo"];
 
- 
-$sentencia=$db->prepare("DELETE FROM entrada where titulo=$titulo"); 
+$sql='DELETE FROM entrada WHERE titulo="'.$titulo.'"';
+$sentencia=$db->prepare($sql); 
 $sentencia->execute([$titulo]);
 
 //redirigir nuevamente a la página para ver el resultado
@@ -63,6 +63,7 @@ header("location: entradas.php");
 
 <?php 
 echo "<br><a class='avolver' href='index.php'> Volver </a>"	;
+echo "<a class='avolver' href='insertarEntrada.php'>Insertar entrada</a>";
 /* Mostrar la tabla con los registros */
 echo $table; 
 

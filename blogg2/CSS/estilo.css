@@ -158,6 +158,9 @@ a{
 	background: rgb(255, 255, 255,0.7);
 	border-radius:1em;
 	font-family: chilanka;
+	margin: 0.5em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 #cajaregistro{
