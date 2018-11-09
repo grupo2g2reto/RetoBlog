@@ -6,22 +6,21 @@ include 'conexion.php';
 
 $titulo=$_POST['titulo'];
 $contenido=$_POST['contenido'];
-$fecha=$_POST['fecha'];
-$veriEntrada=$_POST['veriEntrada'];
+
 
 
 if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == true) {
 
 try {
-$sentencia=$db->prepare("INSERT INTO entrada (titulo,contenido,fecha_entrada) VALUES (?,?,?);"); 
-$sentencia->execute([$titulo,$contenido,$fecha]);
+$sentencia=$db->prepare("INSERT INTO entrada (titulo,contenido) VALUES (?,?);"); 
+$sentencia->execute([$titulo,$contenido]);
 
 $db=null;
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
 }
 
-echo "<br><a href='index.php'>Volver</a>";
+header("location: index.php");
         
 
 } else {

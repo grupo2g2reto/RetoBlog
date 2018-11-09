@@ -11,14 +11,16 @@ try{
   
    
     $clave_cifrada;
-    if($pass != $cpass){
-            echo "Las contraseñas no coinciden";
-    }else{
+
+    if($pass == $cpass){
         $clave_cifrada = password_hash($pass, PASSWORD_DEFAULT, [10]);
         $sentencia=$db->prepare("INSERT INTO   usuario values (?,?,?);");
         $sentencia->execute([$usuario, $correo, $clave_cifrada]);
         header("Location:index.php");
         ?><script>alert(Registro con exito);</script><<?php
+  
+    }else{
+        echo "Las contraseñas no coinciden";
     }
     
 

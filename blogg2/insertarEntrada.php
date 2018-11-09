@@ -23,9 +23,9 @@
 <br><br>
 
 
-<label>fecha:</label><br>
+<!-- <label>fecha:</label><br>
 <input name="fecha" type="date"  required>
-<br><br>
+<br><br> -->
 
 
 <input type="submit" class="boton" name="insertar"  value="Enviar">
