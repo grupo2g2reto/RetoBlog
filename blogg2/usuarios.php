@@ -20,7 +20,7 @@ foreach($sentencia as $usuario){
 	$table.="<tr>
 	<td>".$usuario['idusuario']."</td>
 	<td>".$usuario['correo']."</td>
-	<td><form action='' method='post'> \n
+	<td><form action='' method='post' onsubmit='confirmarBorrarUsuario()'> \n
 	<input type='hidden' name='idusuario' value='".$usuario['idusuario']."'>
 	<input type='submit' value='Eliminar'>
 	</form></td>
@@ -29,7 +29,6 @@ foreach($sentencia as $usuario){
 }
 
 $table.="</table>\n";
-
 
 if (isset($_POST['idusuario']))
 {
@@ -58,6 +57,7 @@ header("location: usuarios.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel='stylesheet' href='CSS/estilo.css'>
+	<script type="text/javascript" src="JS/script.js"></script>
 </head>
 <body>
 

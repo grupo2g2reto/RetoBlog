@@ -26,7 +26,7 @@ foreach($sentencia as $comentario){
 	<td>".$comentario['contenido']."</td>
 	<td>".$comentario['fecha']."</td>
 	<td>".$comentario['usuario_comentario']."</td>
-	<td><form action='' method='post'> \n
+	<td><form action='' method='post' onsubmit='confirmarBorrarComentario()'> \n
 	<input type='hidden' name='numero_comentario' value='".$comentario['numero_comentario']."'>
 	<input type='submit' value='Eliminar'>
 	</form></td>
@@ -62,6 +62,7 @@ header("location: comentarios.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel='stylesheet' href='CSS/estilo.css'>
+	<script type="text/javascript" src="JS/script.js"></script>
 </head>
 <body>
 

@@ -39,3 +39,19 @@ function mostrarComentarios(){
 		location.href=rutaDestino.toString();
 	}
 }
+
+function confirmarBorrarUsuario() {
+    console.log("prueba");
+    var r = confirm("¿Borrar usuario?");
+    if (r == false) {
+        event.preventDefault();
+    }
+}
+
+function confirmarBorrarComentario() {
+    console.log("prueba");
+    var r = confirm("¿Borrar usuario?");
+    if (r == false) {
+        event.preventDefault();
+    }
+}
