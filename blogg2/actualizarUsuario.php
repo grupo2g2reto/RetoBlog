@@ -19,9 +19,9 @@
 		<div class="registro">
 			<form action="accionActualizarUsuario.php" method="post">
 				<label id="icon" ><i class="icon-user"></i></label>
-			  	<input type="text" name="usuario" id="name" placeholder=<?php echo $usuario ?> value=<?php echo $usuario ?> required/>
+			  	<input type="text" name="usuario" id="name" placeholder=<?php echo $usuario ?> value=<?php echo $usuario ?> required readonly="readonly"/>
 			  	<label id="icon" ><i class="icon-envelope "></i></label>
-			  	<input type="email" name="correo" id="name" placeholder=<?php echo $correo ?> value=<?php echo $correo ?> required/>
+			  	<input type="email" name="correo" id="name" placeholder=<?php echo $correo ?> value=<?php echo $correo ?> required readonly="readonly"/>
 			  	<label id="icon" ><i class="icon-shield"></i></label>
 			  	<input type="password" name="pass" id="name" placeholder="Contraseña" required/>
 				<label id="icon" ><i class="icon-shield"></i></label>
