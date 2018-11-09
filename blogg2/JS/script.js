@@ -63,3 +63,12 @@ function confirmarBorrarEntrada() {
         event.preventDefault();
     }
 }
+
+function confirmarActualizarUsuario() {
+    console.log("prueba");
+    var r = confirm("Actualizar usuario?");
+    if (r == false) {
+        event.preventDefault();
+    }
+}
+

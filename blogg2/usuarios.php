@@ -14,7 +14,8 @@ $table = "<table cellpadding='10'>\n";
 $table.="<tr>  
 <th>USUARIO</th>
 <th>CORREO</th>
-<th>ELIMINAR</th></tr>";
+<th>ELIMINAR</th>
+<th>ACTUALIZAR</th></tr>";
 foreach($sentencia as $usuario){
 
 	$table.="<tr>
@@ -24,25 +25,33 @@ foreach($sentencia as $usuario){
 	<input type='hidden' name='idusuario' value='".$usuario['idusuario']."'>
 	<input type='submit' value='Eliminar'>
 	</form></td>
+	<td><form action='actualizarUsuario.php' method='post' onsubmit='confirmarActualizarUsuario()'> \n
+	<input type='hidden' name='correo' value='".$usuario['correo']."'>
+	<input type='hidden' name='contraseña' value='".$usuario['pass']."'>
+	<input type='hidden' name='idusuario' value='".$usuario['idusuario']."'>
+	<input type='submit' value='Actualizar'>
+	</form></td>	
 	</tr> \n";
 
 }
 
 $table.="</table>\n";
 
+
 if (isset($_POST['idusuario']))
 {
-//Se almacena en una variable el nombre del registro a eliminar
-$usuario = $_POST["idusuario"];
+	//Se almacena en una variable el nombre del registro a eliminar
+	$usuario = $_POST["idusuario"];
 
- 
-$sql='DELETE FROM usuario WHERE idusuario="'.$usuario.'"';
-$sentencia=$db->prepare($sql); 
-$sentencia->execute([$usuario]);
+	
+	$sql='DELETE FROM usuario WHERE idusuario="'.$usuario.'"';
+	$sentencia=$db->prepare($sql); 
+	$sentencia->execute([$usuario]);
 
-//redirigir nuevamente a la página para ver el resultado
-header("location: usuarios.php");
+	//redirigir nuevamente a la página para ver el resultado
+	header("location: usuarios.php");
 }
+
 
 } catch(PDOException $e) {
   echo 'Error: ' . $e->getMessage();
