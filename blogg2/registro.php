@@ -11,7 +11,8 @@
 			require_once('cabecera.html');
 			require_once('menuInvitado.php');
 		?>
-		<h1>Registro</h1>
+		<div id="cajaregistro">
+		<h3>Registro</h3>
 		<div class="registro">
 			<form action="accionRegistro.php" method="post">
 				<label id="icon" ><i class="icon-user"></i></label>
@@ -26,6 +27,7 @@
 
 			</form>
 		</div>
+		<div>
 		<hr/>
 		<?php
      //COMPROBAR QUE SE HAN INTRODUCIDO TODOS LOS CAMPOS
@@ -35,7 +37,7 @@
 	        }
 	        else{
 	            $sql = 'SELECT * FROM usuarios';
-	            $rec = mysql_query($sql);
+	          
 	       	
 	       		//COMPRUEBA SI COINCIDEN LAS CONTRASEÑAS
 	      	    if($_POST['pass'] == $_POST['cpass']){
@@ -47,15 +49,10 @@
 		                	var pass= '<?php $pass; ?>';
 		                </script>
 		                <?php
-		                	if( ?> <script>/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/.test(pass)</script> <?php ){
+		                	
 		                		$sentencia=$db->prepare("INSERT INTO usuario (usuario,correo,pass) VALUES (?,?,?);"); 
 								$sentencia->execute([$usuario,$correo,$pass]);
-		                	$sentencia = "INSERT INTO usuarios (usuario,pass,correo) VALUES ('$usuario','$pass','$correo')";
-		                      mysql_query($sql);
-		                      echo 'Usted se ha registrado correctamente.';	               
-		                  	}else{
-		                  		echo "la contraseña debe de contener...";
-		                  	}
+		                
 	                }
 	                else{
 	                    echo 'Vuelva a introducir las contraseñas.';

@@ -1,6 +1,3 @@
-
-
-
 <?php
 session_start();
 
@@ -19,7 +16,8 @@ $table.="<tr>
 <th>TITULO</th>
 <th>CONTENIDO</th>
 <th>FECHA</th>
-<th>USUARIO</th></tr>";
+<th>USUARIO</th>
+<th>ELIMINAR</th></tr>";
 foreach($sentencia as $comentario){
 
 	$table.="<tr>
@@ -66,11 +64,12 @@ header("location: comentarios.php");
 	<link rel='stylesheet' href='CSS/estilo.css'>
 </head>
 <body>
-<?php 
 
+<?php 
+echo "<br><a class='avolver' href='index.php'> Volver </a>"	;
 /* Mostrar la tabla con los registros */
 echo $table; 
-echo "<br><a class='avolver' href='index.php'> Volver </a>"	
+
 ?>
 
 

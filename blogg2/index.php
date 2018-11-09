@@ -18,10 +18,6 @@
 	require_once('cabecera.html');
 	?>
 
-	<script>
-		alert('Bienvenido ' + <?php $_SESSION['usuario']; ?> + '!');
-	</script>
-
 	<?php
 
 	

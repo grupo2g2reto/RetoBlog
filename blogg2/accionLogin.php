@@ -8,7 +8,7 @@ try{
 
     include 'conexion.php';
 
-    $sentencia=$db->prepare("SELECT pass FROM usuario WHERE usuario = :usuario "); 
+    $sentencia=$db->prepare("SELECT pass FROM usuario WHERE idusuario = :usuario "); 
     $sentencia->bindParam(':usuario',$usuario, PDO::PARAM_STR);
     $sentencia->execute();
 
