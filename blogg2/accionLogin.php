@@ -12,13 +12,17 @@ try{
     $sentencia->bindParam(':usuario',$usuario, PDO::PARAM_STR);
     $sentencia->execute();
 
-    $encryptada;
+    
 
     $resultado=$sentencia->fetch(PDO::FETCH_ASSOC);
+    $filas = $sentencia->rowCount();
+    $encryptada="";
+    if($filas >0){
+      
     foreach($resultado as $clave){
         $encryptada = $clave;
     }
-    
+}
     if(password_verify($pass, $encryptada)){
         //Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
         $_SESSION['logueado']=true;
