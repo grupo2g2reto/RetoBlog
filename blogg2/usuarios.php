@@ -9,7 +9,7 @@ include 'conexion.php';
 try {
 $sentencia=$db->prepare("SELECT * FROM usuario"); 
 $sentencia->execute();
-echo "<h3 class='h3titulo'>USUARIOS:</h3>";
+echo "<h1>USUARIOS:</h1>";
 $table = "<table cellpadding='10'>\n";
 $table.="<tr>  
 <th>USUARIO</th>

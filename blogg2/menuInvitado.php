@@ -12,9 +12,9 @@
 		<div id="testbox" >
 	      	<form action="accionLogin.php" method="post" >
 			  <label>Usuario:</label>
-		        <input type="text" name="usuario" id="name" placeholder="Usuario" required/>
+		        <input type="text" name="usuario"  placeholder="Usuario" required/>
 				<label>Contraseña:</label>  
-				<input type="password" name="pass" id="password" placeholder="Contraseña" required/>
+				<input type="password" name="pass"  placeholder="Contraseña" required/>
 
 				<br> <input class="aLogin" type="submit" name="login" value="LOGIN">
 			

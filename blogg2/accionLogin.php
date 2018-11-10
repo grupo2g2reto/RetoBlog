@@ -7,15 +7,14 @@ try{
     $pass=$_POST["pass"];
 
     include 'conexion.php';
-
+ 
     $sentencia=$db->prepare("SELECT pass FROM usuario WHERE idusuario = :usuario "); 
     $sentencia->bindParam(':usuario',$usuario, PDO::PARAM_STR);
     $sentencia->execute();
-
-    
-
+  
     $resultado=$sentencia->fetch(PDO::FETCH_ASSOC);
     $filas = $sentencia->rowCount();
+
     $encryptada="";
     if($filas >0){
       
@@ -27,7 +26,7 @@ try{
         //Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
         $_SESSION['logueado']=true;
         $_SESSION['usuario']=$usuario;
-       
+        
          header ('Location:index.php'); 
          
     }else{

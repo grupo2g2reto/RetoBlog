@@ -72,3 +72,67 @@ function confirmarActualizarUsuario() {
     }
 }
 
+/*registro */
+var red = "#8C1010";
+var original = "rgba(10, 180, 180, 1)";
+
+function validarUsuario(u) {
+    var usuario = document.getElementById("usuario");
+    var array = [];
+    /*Busca una cadena .test() */
+    if (/[-!@#$%^&*()_+|~=`{}\[\]:";'<>?,.\/]/.test(u)) {
+        /*push() agrega uno o más elementos al final de un array y devuelve la nueva */
+        array.push("No se puede utilizar caracteres especiales");
+    }
+    if (array.length > 0) {
+        usuario.setCustomValidity(array);
+        usuario.style.borderColor = red;
+    } else {
+        usuario.setCustomValidity("");
+        usuario.style.borderColor = original;
+    }
+}
+
+function validarPass(pass) {
+    var clave = document.getElementsById("pass");
+    var array = [];
+    if (!/^.{7,15}$/.test(pass)) {
+        array.push("La contraseña debe tener entre 7-15 caracteres.");
+    }
+    if (!/\d/.test(pass)) {
+        array.push("Debe contener al menos un número.");
+    }
+    if (!/[a-z]/.test(pass)) {
+        array.push("Debe contener una letra minúscula.");
+    }
+    if (!/[A-Z]/.test(pass)) {
+        array.push("Debe contener una letra mayúscula.");
+    }
+    if (array.length > 0) {
+        /*join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena. */
+        clave.setCustomValidity(array.join(""));
+        clave.style.borderColor = red;
+       
+    } else {
+        clave.setCustomValidity("");
+        clave.style.borderColor = original;
+     
+    }
+}
+
+function validarCorreo(email) {  
+    var correo = document.getElementById("correo");
+    var array = [];
+    if (/^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) {
+        correo.setCustomValidity("");
+        correo.style.borderColor = original;
+        
+    
+        
+    } else {
+        array.push("Introduce el correo como este ejemplo nombrecorreo@dominio.com");
+        correo.setCustomValidity(array);
+        correo.style.borderColor = red;
+    
+    }
+}

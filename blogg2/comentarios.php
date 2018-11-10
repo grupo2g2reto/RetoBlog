@@ -9,7 +9,7 @@ include 'conexion.php';
 try {
 $sentencia=$db->prepare("SELECT * FROM comentario"); 
 $sentencia->execute();
-echo "<h3 class='h3titulo'>COMENTARIOS:</h3>";
+echo "<h1>COMENTARIOS:</h1>";
 $table = "<table cellpadding='10'>\n";
 $table.="<tr>  
 <th>ID</th>

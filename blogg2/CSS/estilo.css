@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: "letra";
+    src: url(../font/Chilanka.ttf);
+}
 
 @font-face {
     font-family: "header";
@@ -10,7 +13,7 @@ header
 	height: 12em;
 }
 body{
-	background-image: url(../img/fondo.jpg);
+	background-image: url(../img/fondo2.jpg);
 	background-size: cover;
 	color: black;
 	font-family: arial;
@@ -21,16 +24,22 @@ h1{
 	font-family: "header";
 	font-size: 2.5em;
 	text-shadow: 4px 4px black; 
-	text-align: center;
+	display: flex;
+    justify-content: center;
+}
+h2{
+	font-family: "letra";
 }
 
 h3{
 	
-	font-family: chilanka;
+	font-family: "letra";
 	margin-top: 2em;
-	font-size: 1em;
 	color: white;
-    margin-left: 55em;
+	display: flex;
+    justify-content: center;
+	font-size: 2em;
+    text-transform: uppercase;
 }
 
 .h3titulo{
@@ -46,17 +55,34 @@ nav{
 	padding-top: 2em;
 }
 #listaLogin{
-float: right;
+    width: 75%;
+    margin-left: 10em;
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+	  align-items: flex-start;
+	  position: absolute;
+	  top: 16.55em;
 }
 
 #testbox{
 	display: none;
-	margin-top: 18px;
 	position: absolute;
+	right: 1em;
 	background: rgb(255, 255, 255,0.7);
 	border-radius:1em; 
 	width: 12em;
-    padding: 0.9em;
+	padding: 0.9em;
+	margin-top: 60px;
+   
 }
 
 .textarea {
@@ -67,14 +93,15 @@ input{
 	border-radius: 0.3em;
 	padding: 0.3em;
     margin-top: 7px;
-    margin-bottom: 11px;
+	margin-bottom: 11px;
+	border: 2px dashed black;
 }
 
 label{
 	color: white;
 	text-shadow: 1px 1px black;
 	font-family: "header";
-	font-size: 12px;
+	font-size: 16px;
 
 }
 
@@ -151,6 +178,7 @@ a{
 	color: black;
 	padding: 0.5em;
 	
+	
 }
 
  .avolver{
@@ -164,9 +192,10 @@ a{
     font-weight: bold;
     text-transform: uppercase;
 }
+/*registro*/
 
-#cajaregistro{
-	margin-top: -10em;
+ #cajaregistro{
+	margin-top: -14em;
 }
 
 .registro{
@@ -177,6 +206,7 @@ a{
 	padding: 3em;
 	margin: 0 auto;
 	margin-bottom: 7em;
+	
    
 }
 
@@ -188,7 +218,7 @@ a{
     font-family: header;
 	font-size: 11px;
 	margin: 0 auto;
-}
+} 
 
 table{
 	background: rgb(255, 255, 255,0.5);
@@ -205,11 +235,32 @@ td,th{
 	border-radius: 7px;
 }
 
+/*actualizar*/
+
+.actualizar{
+	background: rgb(255, 255, 255,0.7);
+	border-radius:1em;
+	text-align: center;
+	width: 11.5%;
+	padding: 3em;
+	margin: 0 auto;
+	margin-bottom: 11em;
+	position: relative;
+    top: 9em;
+   
+}
+#acTitulo{
+	display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5em;
+   
+}
 /*BOTONES SOCIALES*/
 
 .flex-center {
-  width: 100%;
-  min-height: 50vh;
+  width: 89%;
+  min-height: 6vh;
 
   
   display: -webkit-box;
@@ -275,7 +326,9 @@ footer{
 	border-radius: 1em;
 	margin: 45px 30px;
   }
-  
+  footer a{
+	font-family: "letra";
+  }
 footer ul{
 	margin: 0px 30px;
 	padding: 10px;

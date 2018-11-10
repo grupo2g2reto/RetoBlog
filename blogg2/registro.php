@@ -3,6 +3,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 		<link href="CSS/estilo.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="JS/script.js"></script>
+
 	  	<title>Login</title>
 	  	<meta charset = "utf-8">
 	</head>
@@ -14,18 +16,19 @@
 		<div id="cajaregistro">
 		<h3>Registro</h3>
 		<div class="registro">
+		
 			<form action="accionRegistro.php" method="post">
-				<label id="icon" ><i class="icon-user"></i></label>
-			  	<input type="text" name="usuario" id="name" placeholder="Usuario" required/>
-			  	<label id="icon" ><i class="icon-envelope "></i></label>
-			  	<input type="email" name="correo" id="name" placeholder="Correo" required/>
-			  	<label id="icon" ><i class="icon-shield"></i></label>
-			  	<input type="password" name="pass" id="name" placeholder="Contraseña" required/>
-				  <label id="icon" ><i class="icon-shield"></i></label>
-			  	<input type="password" name="cpass" id="name" placeholder="Confirmar contraseña" required/>
+			
+			  	<input type="text" name="usuario" id="usuario"  value="" oninput="return validarUsuario(this.value)" placeholder="Usuario" required/>
+			  
+			  	<input type="email" name="correo" id="correo" value="" oninput="return validarCorreo(this.value)"  placeholder="Correo" required/>
+			 
+			  	<input type="password" name="pass" id="pass"  value="" oninput="return validarPass(this.value)" placeholder="Contraseña" required/>
+	
+			  	<input type="password" name="cpass"  value=""  placeholder="Confirmar contraseña" required/>
 			  	<input class="aRegistro" type="submit" name="login" value="REGISTRARSE">
 
-			</form>
+			</form> 
 		</div>
 		<div>
 		<hr/>

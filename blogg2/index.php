@@ -39,7 +39,8 @@
 				 require_once('menuAdministrador.php');
 				 ?><script type="text/javascript" src="JS/script.js"></script><?php
 
-			}else{
+			}
+			else if($usuario!='admin') {
 				
 				require_once('menuUsuario.php');
 				echo "<div>
