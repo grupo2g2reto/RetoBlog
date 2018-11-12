@@ -33,39 +33,35 @@
 		<div>
 		<hr/>
 		<?php
-     //COMPROBAR QUE SE HAN INTRODUCIDO TODOS LOS CAMPOS
+//------------------------------------COMPROBAR QUE SE HAN INTRODUCIDO TODOS LOS CAMPOS
 	    if(isset($_POST['enviar'])){
 	        if($_POST['usuario'] == '' or $_POST['pass'] == '' or $_POST['cpass'] == '' or $_POST['email'] == ''){
 	            echo 'Todos los campos son obligatorios.';
 	        }
 	        else{
 	            $sql = 'SELECT * FROM usuarios';
-	          
-	       	
-	       		//COMPRUEBA SI COINCIDEN LAS CONTRASEÑAS
+//-------------------------------------SI COINCIDEN LAS CONTRASEÑAS
 	      	    if($_POST['pass'] == $_POST['cpass']){
-		                $usuario = $_POST['usuario'];
-		                $pass = $_POST['pass'];
-		                $correo=$_POST['correo'];
-		                ?>
-		                <script>
-		                	var pass= '<?php $pass; ?>';
-		                </script>
-		                <?php
-		                	
-		                		$sentencia=$db->prepare("INSERT INTO usuario (usuario,correo,pass) VALUES (?,?,?);"); 
-								$sentencia->execute([$usuario,$correo,$pass]);
-		                
-	                }
-	                else{
-	                    echo 'Vuelva a introducir las contraseñas.';
-	                }
+//--------------------------------------CARGAR DATOS
+		            $usuario = $_POST['usuario'];
+		            $pass = $_POST['pass'];
+		            $correo=$_POST['correo'];
+		            ?>
+		            <script>
+	         	    	var pass= '<?php $pass; ?>';
+	                </script>
+			        <?php    
+//-----------------------------------INSERTAR USUARIO	
+			            $sentencia=$db->prepare("INSERT INTO usuario (usuario,correo,pass) VALUES (?,?,?);"); 
+						$sentencia->execute([$usuario,$correo,$pass]);        
+	            }else{
+	                echo 'Vuelva a introducir las contraseñas.';
 	            }
-	              
-	        }
-			require_once('footer.html');
+	        }     
+	    }
+//-----------------------------------LLAMAR AL FOOTER
+		require_once('footer.html');
 		?>
-		
 	</body>
 </html>
 
