@@ -8,6 +8,7 @@
 		<script>
 			//UTILIZAMOS EL LOCALSTORAGE PARA GUARDAR EL USUARIO
 			//window.localStorage.setItem("usuario");
+			document.cookie="key=value;"
 			document.cookies = "usuario= <?php echo $usuario?>";
 	    </script>
 
