@@ -1,9 +1,17 @@
 
-		<?php
-			require_once('cabecera.html');
-			require_once('menuAdministrador.php');
+		<?php			
 			$usuario = $_POST["idusuario"];
 			$correo = $_POST["correo"];
+			require_once('cabecera.html');
+			if(isset($usuario)){
+				if($usuario=='admin'){
+					require_once('menuAdministrador.php');
+				}else{
+					require_once('menuUsuario.php');
+				}
+			}
+			
+			
 		?>
 		<div id="cajaregistro">
 		<h3 id="acTitulo">Actualizar Usuario</h3>
