@@ -17,8 +17,8 @@ try{
         echo $sql;
         $sentencia=$db->prepare($sql);
         $sentencia->execute([$usuario]);
-        header("Location:usuarios.php");
-        ?><script>alert(Registro con exito);</script><<?php
+        header("Location:index.php");
+        ?><script>alert(Actualizado con exito);</script><<?php
     }
     
 
