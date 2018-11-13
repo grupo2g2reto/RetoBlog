@@ -30,7 +30,6 @@
         }else{
 //-----------------------Aqui guardamos el usuario en la sesion para recuperarlo en comentarios
             $_SESSION['logueado']=false;
-<<<<<<< HEAD
     
     
             echo ("<script>
@@ -38,11 +37,6 @@
             window.location.href= 'index.php';
             </script>");
        
-=======
-            echo "<link rel='stylesheet' href='CSS/estilo.css'>";
-            echo "<p>Usuario o Password estan incorrectos.</p>";
-            echo "<br><a href='index.php'>Volver a Intentarlo</a>";  
->>>>>>> 61cf482b22692f84c02e19bef4dae0e082c45921
         } 
         $db=null;    
     }catch(PDOException $e) {
