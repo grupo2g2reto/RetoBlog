@@ -1,5 +1,5 @@
 
-/* login */
+/*------------- -----------------------login */
 
 function mostrarOcultar(id){
     var elemento = document.getElementById(id);
@@ -13,33 +13,33 @@ function mostrarOcultar(id){
     elemento.style.display = "none"
     };
     return true;
-    };
+};
 
 
-//recogemos los elementos li
+//-----------------------------recogemos los elementos li
 var lis = document.getElementsByTagName("li");
 
 for(var i = 0; i < lis.length; i++){
 	document.getElementById(lis[i].id).addEventListener("click", redireccionar);
 }
 
+//-----------------------------REDIRECCIONAMIENTO--------------------------
 function redireccionar(e){
-
 	var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/' + e.target.id + '.php';
-	
 	if(window.location != rutaDestino){
-
 		location.href=rutaDestino.toString();
 	}
 }
+
+//------------------------MOSTRAR COMENTARIOS-------------------------------
 function mostrarComentarios(){
     var rutaDestino ='http://localhost/Proyectos/RETOBLOG/RetoBlog/blogg2/insertarComentario.php';
 	if(window.location != rutaDestino){
-
 		location.href=rutaDestino.toString();
 	}
 }
 
+//-------------------------CONFIRMAR BORRAR USUARIO----------------------
 function confirmarBorrarUsuario() {
     console.log("prueba");
     var r = confirm("¿Borrar usuario?");
@@ -48,6 +48,7 @@ function confirmarBorrarUsuario() {
     }
 }
 
+//--------------------------CONFIRMAR BORRAR COMENTARIO---------------------
 function confirmarBorrarComentario() {
     console.log("prueba");
     var r = confirm("¿Borrar comentario?");
@@ -56,6 +57,7 @@ function confirmarBorrarComentario() {
     }
 }
 
+//--------------------------CONFIRMAR BORRAR ENTRADA--------------------------
 function confirmarBorrarEntrada() {
     console.log("prueba");
     var r = confirm("¿Borrar entrada?");
@@ -64,6 +66,7 @@ function confirmarBorrarEntrada() {
     }
 }
 
+//---------------------------------CONFIRMACIÓN ACTUALIZACIÓN DE USUARIO-------
 function confirmarActualizarUsuario() {
     console.log("prueba");
     var r = confirm("Actualizar usuario?");
@@ -72,10 +75,11 @@ function confirmarActualizarUsuario() {
     }
 }
 
-/*registro */
+/*-------------------------REGISTRO-----------------------------------*/
 var red = "#8C1010";
 var original = "rgba(10, 180, 180, 1)";
 
+//--------------------------VALIDAR USUARIO-----------------
 function validarUsuario(u) {
     var usuario = document.getElementById("usuario");
     var array = [];
@@ -93,6 +97,7 @@ function validarUsuario(u) {
     }
 }
 
+//--------------------------VALIDAR CONTRASEÑA--------------------
 function validarPass(pass) {
     var clave = document.getElementById("pass");
     var array = [];
@@ -112,23 +117,19 @@ function validarPass(pass) {
         /*join() une todos los elementos de una matriz (o un objeto similar a una matriz) en una cadena y devuelve esta cadena. */
         clave.setCustomValidity(array.join(""));
         clave.style.borderColor = red;
-       
     } else {
         clave.setCustomValidity("");
         clave.style.borderColor = original;
-     
     }
 }
 
+//----------------------VALIDAR EMAIL-----------------
 function validarCorreo(email) {  
     var correo = document.getElementById("correo");
     var array = [];
     if (/^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(email)) {
         correo.setCustomValidity("");
-        correo.style.borderColor = original;
-        
-    
-        
+        correo.style.borderColor = original;   
     } else {
         array.push("Introduce el correo como este ejemplo nombrecorreo@dominio.com");
         correo.setCustomValidity(array);
@@ -136,3 +137,4 @@ function validarCorreo(email) {
     
     }
 }
+
