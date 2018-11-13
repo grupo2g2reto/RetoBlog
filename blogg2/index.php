@@ -8,6 +8,7 @@
 		<script>
 			//UTILIZAMOS EL LOCALSTORAGE PARA GUARDAR EL USUARIO
 			//window.localStorage.setItem("usuario");
+<<<<<<< HEAD
 			
 			var cookieDate = new Date (2018,11,15);
 			var usuario="<?php echo $usuario?>";
@@ -30,6 +31,11 @@
 createCookie("usuario","<?php echo $usuario?>",5);
 
 		</script>
+=======
+			document.cookie="key=value;"
+			document.cookies = "usuario= <?php echo $usuario?>";
+	    </script>
+>>>>>>> 61cf482b22692f84c02e19bef4dae0e082c45921
 
 	    <?php
 	}
